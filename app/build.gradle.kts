@@ -32,9 +32,15 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+        freeCompilerArgs = listOf("-Xjvm-default=all")
     }
     buildFeatures {
         viewBinding = true
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
 }
 
@@ -46,6 +52,11 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation("androidx.activity:activity-compose:1.9.3")
+    implementation(libs.androidx.ui.graphics)      // Jetpack Compose Graphics
+    implementation(libs.androidx.ui.tooling.preview) // Jetpack Compose Tooling Preview
+    debugImplementation(libs.androidx.ui.tooling)   // Jetpack Compose Tooling
+    implementation(libs.androidx.material3) // Jetpack Compose Material Design 3
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
