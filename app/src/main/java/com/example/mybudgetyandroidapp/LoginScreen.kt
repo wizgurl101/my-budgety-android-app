@@ -90,6 +90,7 @@ fun LoginScreen(onLoginSuccess: () -> Unit) {
             onClick = {
         /*TODO: implement login logic for now we are logging it*/
         Log.i("Login", "Email: $email, Password: $password")
+                onLoginSuccess()
         },
             colors = ButtonDefaults.buttonColors(
                 containerColor = customGreenColor
