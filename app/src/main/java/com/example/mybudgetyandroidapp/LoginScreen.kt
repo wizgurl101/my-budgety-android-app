@@ -53,13 +53,21 @@ fun LoginScreen(onLoginSuccess: () -> Unit) {
 
         Spacer(modifier = Modifier.height(4.dp))
 
-        Text(
-            text = "My Budgety",
-            style = MaterialTheme.typography.bodyLarge.copy(
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
-                color = customGreenColor
-            )
+//        Text(
+//            text = "My Budgety",
+//            style = MaterialTheme.typography.bodyLarge.copy(
+//                fontSize = 24.sp,
+//                fontWeight = FontWeight.Bold,
+//                color = customGreenColor
+//            )
+//        )
+
+        ComposableRiveAnimationView(
+            modifier = Modifier.size(200.dp),
+            animation = R.raw.art_prompt_title,
+            onInit = {
+                it.play()
+            }
         )
 
         Spacer(modifier = Modifier.height(8.dp))

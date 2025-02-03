@@ -60,4 +60,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("app.rive:rive-android:9.6.5")
+    implementation("androidx.startup:startup-runtime:1.1.1")
 }
